@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "concurrently \"yarn run server\" \"yarn run client\"",
+    "server": "cd server && yarn start",
+    "client": "cd client && yarn start",
+    "install-deps": "yarn && concurrently \"yarn run install-server-deps\" \"yarn run install-client-deps\"",
+    "install-server-deps": "cd server && yarn",
+    "install-client-deps": "cd client && yarn"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
